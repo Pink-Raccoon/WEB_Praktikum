@@ -5,12 +5,20 @@ const scriptOfSample = function(str, SCRIPTS) {
     for(let i of SCRIPTS){
         
         for(let j of i.ranges){
-            if(uniCode > i.ranges[j][0] && uniCode < i.ranges[j][1]){
+            if(uniCode >= j[0] && uniCode <= j[1]){
+                
                 return i.name
             }
-
         }
+
+        } return "unknown"
     }
 
-}
+
 console.log(scriptOfSample("英", SCRIPTS))
+console.log( scriptOfSample("A", SCRIPTS) ) 
+console.log( scriptOfSample("я", SCRIPTS) )
+console.log(scriptOfSample("مساء الخير", SCRIPTS))
+console.log(scriptOfSample(".", SCRIPTS))
+
+module.exports={scriptOfSample}
