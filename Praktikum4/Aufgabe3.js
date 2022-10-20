@@ -22,4 +22,5 @@ const numberOfCodes = ({ ranges }) => ranges.reduce((curr, [from, to]) => curr +
 
 console.log(oldAndLiving(SCRIPTS))
 console.log(oldAndLivingFilter(SCRIPTS))
-console.log(numberOfCodes(SCRIPTS[3]))
+console.log(numberOfCodes(SCRIPTS[41]))
+console.log(SCRIPTS[41].ranges[1][0])
